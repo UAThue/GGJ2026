@@ -12,8 +12,11 @@ public class GA_ShowDialog : GameAction
 {
     [Header("Visuals")]
     public Sprite overlay; // Any photo over the top of the dialog? If we put characters, they go here. Optional)  
+    public Color fgColor; //Designated color of the foreground
     public Sprite background; // The background image of the dialog box. Have default, maybe?
+    public Color bgColor; //Designated color of the background
     [TextArea] public string DialogText; // For now, dialogs are just one set of text.
+    public Sprite speakerSprite; //Visual of who is speaking
     [Header("Sounds")]
     public List<AudioClip> invokeSounds;
     public List<AudioClip> cancelSounds;
