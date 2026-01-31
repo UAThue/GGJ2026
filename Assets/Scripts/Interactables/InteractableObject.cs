@@ -26,34 +26,39 @@ public class InteractableObject : MonoBehaviour
         //MAYBE: Remove us from the up to date list in the Game Manager
     }
 
-    public void OnTriggerEnter()
+    public void OnTriggerEnter(Collider other)
     {
-        // Remember that the player is in the trigger by adding to player's list of objects in range
-        GameManager.instance.player.objectsInRange.Add(this);
+        // Check if the other has a Pawn component
+        if (other.GetComponent<Pawn>() != null) {
 
-        // Do any "entering trigger" actions - NOTE: this is not the game action ( like viewing the target )
-        //        but things like "show the E to interact text" 
-        // Get a list of all the game actions for the current chapter
-        List<GameAction> temp = rangeActions.FindAll(GameManager.instance.currentChapter);
-        // Perform them all
-        foreach (GameAction action in temp) {
-            action.Invoke();
+            // Remember that the player is in the trigger by adding to player's list of objects in range
+            GameManager.instance.player.objectsInRange.Add(this);
+
+            // Do any "entering trigger" actions - NOTE: this is not the game action ( like viewing the target )
+            //        but things like "show the E to interact text" 
+            // Get a list of all the game actions for the current chapter
+            List<GameAction> temp = rangeActions.FindAll(GameManager.instance.currentChapter);
+            // Perform them all
+            foreach (GameAction action in temp) {
+                action.Invoke();
+            }
         }
     }
 
-    public void OnTriggerExit()
+    public void OnTriggerExit(Collider other)
     {
-        // Forget that the player is in the trigger by adding to player's list of objects in range
-        GameManager.instance.player.objectsInRange.Remove(this);
+        // Check if the other has a Pawn component
+        if (other.GetComponent<Pawn>() != null) {
 
-        //TODO: If an action is running, call all the "cancel" actions for that action ( so text/photo goes away when we leave trigger)
-        //TODO: Do any "you left the trigger" stuff - hide the "press E" text, etc.
-        // Get a list of all the game actions for the current chapter
-        List<GameAction> temp = rangeActions.FindAll(GameManager.instance.currentChapter);
-        // Perform them all
-        foreach (GameAction action in temp) {
-            action.Cancel();
+            // Forget that the player is in the trigger by adding to player's list of objects in range
+            GameManager.instance.player.objectsInRange.Remove(this);
+
+            //Call the "cancel" actions for this action ( so text/photo goes away when we leave trigger)
+            List<GameAction> temp = rangeActions.FindAll(GameManager.instance.currentChapter);
+            // Perform them all
+            foreach (GameAction action in temp) {
+                action.Cancel();
+            }
         }
-
     }
 }

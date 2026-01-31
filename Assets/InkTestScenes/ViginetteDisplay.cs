@@ -5,13 +5,16 @@ using UnityEngine.UI;
 public class ViginetteDisplay : MonoBehaviour
 {
     [Header("Variables")]
+    [SerializeField] private Image viginette;
+    [SerializeField] private Color targetColor = new Color(1, 1, 1, 0);
+    [SerializeField] private float fadeSpeed;
+    [SerializeField] private Color viginetteColor;
+    private float curOpacity;
 
-    [SerializeField] private float curOpacity;
-    [SerializeField] Image viginette;
+    public void Start()
+    {
 
-    [SerializeField] Color none = new Color(1, 1, 1, 0);
-    [SerializeField] Color targetColor = new Color(1, 1, 1, 0.35f);
-
+    }
 
     //Start revealing the Viginette [Public call when entering trigger]
     public void RevealViginette()
@@ -25,7 +28,7 @@ public class ViginetteDisplay : MonoBehaviour
     {
         curOpacity += 0.2f;
 
-        viginette.color = Color.Lerp(none, targetColor, curOpacity);
+        viginette.color = Color.Lerp(viginetteColor, targetColor, curOpacity);
 
         yield return new WaitForSeconds(0.125f);
 
@@ -51,7 +54,7 @@ public class ViginetteDisplay : MonoBehaviour
     {
         curOpacity -= 0.2f;
 
-        viginette.color = Color.Lerp(none, targetColor, curOpacity);
+        viginette.color = Color.Lerp(viginetteColor, targetColor, curOpacity);
 
         yield return new WaitForSeconds(0.125f);
 
