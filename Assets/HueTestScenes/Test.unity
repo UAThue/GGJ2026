@@ -508,9 +508,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   rangeActions:
-    dictionary: []
+    dictionary:
+    - key: {fileID: 11400000, guid: ec17406ca11dfac4abef865edc4df638, type: 2}
+      value: {fileID: 11400000, guid: df7eccebdf36d83429c52316bc9d59b2, type: 2}
   interactionActions:
-    dictionary: []
+    dictionary:
+    - key: {fileID: 11400000, guid: ec17406ca11dfac4abef865edc4df638, type: 2}
+      value: {fileID: 0}
 --- !u!1 &512902747
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +549,8 @@ MonoBehaviour:
     - key: {fileID: 11400000, guid: ec17406ca11dfac4abef865edc4df638, type: 2}
       value: {fileID: 11400000, guid: df7eccebdf36d83429c52316bc9d59b2, type: 2}
     - key: {fileID: 11400000, guid: ec17406ca11dfac4abef865edc4df638, type: 2}
+      value: {fileID: 11400000, guid: dcf230fb9b31149468bd4a344a9a8f6f, type: 2}
+    - key: {fileID: 11400000, guid: 98269aef018f4e942b0d88ef8379226d, type: 2}
       value: {fileID: 11400000, guid: dcf230fb9b31149468bd4a344a9a8f6f, type: 2}
   keyTest: {fileID: 11400000, guid: ec17406ca11dfac4abef865edc4df638, type: 2}
   fillMeUp: []
