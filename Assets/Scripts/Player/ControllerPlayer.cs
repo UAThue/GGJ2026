@@ -3,12 +3,14 @@ using System.Collections.Generic;
 
 public class ControllerPlayer : Controller
 {
-    public List<InteractableObject> objectsInRange;
+    [Header("Do not change. In inspector for debugging Only!")]
+    public List<InteractableObject> objectsInRange; 
 
 
     // Awake runs before Start
     public override void Awake()
     {
+        objectsInRange = new List<InteractableObject>();
         base.Awake();
     }
 
