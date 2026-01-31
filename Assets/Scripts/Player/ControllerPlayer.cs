@@ -1,7 +1,11 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ControllerPlayer : Controller
-{ 
+{
+    public List<InteractableObject> objectsInRange;
+
+
     // Awake runs before Start
     public override void Awake()
     {

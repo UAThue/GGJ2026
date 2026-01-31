@@ -4,7 +4,13 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance; // Singleton
+    
+    [Header("Important Objcts")] // NOTE: Keep this section as light as possible, please!
+    public ControllerPlayer player;
     public ChapterData currentChapter; // What chapter are we currently in? 
+
+    [Header("Game Data")]
+    public ChapterData startingChapter;
 
     void Awake()
     {
