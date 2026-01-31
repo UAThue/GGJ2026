@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Ch_", menuName = "ScriptableObjects/ChapterData", order = 1)]
+[CreateAssetMenu(fileName = "Ch_", menuName = "ChapterData/ChapterData", order = 1)]
 
 public class ChapterData : ScriptableObject
 {
