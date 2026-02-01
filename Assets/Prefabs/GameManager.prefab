@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6191857689311085579}
   - component: {fileID: 6877505930651250907}
   - component: {fileID: 3295328872583892913}
+  - component: {fileID: 2815882621340146748}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -48,6 +49,7 @@ MonoBehaviour:
   player: {fileID: 0}
   currentChapter: {fileID: 11400000, guid: ec17406ca11dfac4abef865edc4df638, type: 2}
   parentObjectForInnocents: {fileID: 0}
+  canPlayerMove: 1
   startingChapter: {fileID: 11400000, guid: ec17406ca11dfac4abef865edc4df638, type: 2}
 --- !u!114 &3295328872583892913
 MonoBehaviour:
@@ -61,3 +63,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94578b1c0456f6140ba5dfc62c7eb2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EscapeToExit
+--- !u!114 &2815882621340146748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5355990132725507926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0418c43490b380c4a8cc7b8f85498b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicPlayer
+  songs:
+  - {fileID: 8300000, guid: 587cb8cedee3420479ca46ef83b9ef52, type: 3}
+  - {fileID: 8300000, guid: fcc0b9db8019000418f009dc93120ea9, type: 3}
+  - {fileID: 8300000, guid: 7b402a7a44d208345a82c136c231ce3d, type: 3}
+  musicPlayer: {fileID: 0}
+  chosenVolume: 0.8
+  currentSong: 0
+  currentState: 0
