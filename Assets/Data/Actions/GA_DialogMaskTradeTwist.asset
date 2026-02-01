@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcf689500b3c4144ca0990fec2888de8, type: 3}
-  m_Name: GA_TellPlayerAboutTrade
+  m_Name: GA_DialogMaskTradeTwist
   m_EditorClassIdentifier: Assembly-CSharp::GA_ShowDialog
   OnInvoke:
     m_PersistentCalls:
