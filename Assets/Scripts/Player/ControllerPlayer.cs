@@ -7,6 +7,7 @@ public class ControllerPlayer : Controller
     [Header("Inputs")]
     public InputActionAsset inputActions;
 
+
     [Header("Do not change. In inspector for debugging Only!")]
     public List<InteractableObject> objectsInRange;
 
