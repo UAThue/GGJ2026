@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        UIManager.instance.ShowMenu();
     }
 
     // Update is called once per frame
@@ -91,10 +91,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void InitializeGame()
+    public void InitializeGame()
     {
         //TODO: Start a new game session - clear any data, set everything to starting data. 
         //      This is also called when we need to "restart" a new game without closing, so remember to clear everything
+
+        // ACK! For now, just hide the menu and start playing!
+        Debug.Log("init game");
+        UIManager.instance.HideMenu();
     }
 
     public void LoadNextChapter()

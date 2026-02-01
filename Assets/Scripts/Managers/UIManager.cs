@@ -29,6 +29,8 @@ public class UIManager : MonoBehaviour
     [Header("Photo Popup")]
     public GameObject photoObject;
     public Image photo;
+    [Header("Main Menu")]
+    public GameObject mainMenuObject;
     [Header("In Game HUD")]
     public GameObject HUDObject;
     public Image logo;
@@ -49,6 +51,20 @@ public class UIManager : MonoBehaviour
         else {
             Destroy(gameObject);
         }
+    }
+
+    public void ShowMenu()
+    {
+        mainMenuObject.SetActive(true);
+        GameManager.instance.SetPlayerMove(false);
+    }
+
+    public void HideMenu()
+    {
+        mainMenuObject.SetActive(false);
+        GameManager.instance.SetPlayerMove(true);
+        // CHEAT and show HUD -- we should put this in a level start or something, but it is almost the end of the Jam
+        ShowHUD();
     }
 
     public void ToggleChapter1SoltionUI()
@@ -168,6 +184,8 @@ public class UIManager : MonoBehaviour
         //Hide HUD
         HideHUD();
 
+        // Show the Menu
+        ShowMenu();
     }
 
     // Update is called once per frame
