@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     public float vignetteFadedInOpacity = 0.2f;
     public float vignetteFadedOutOpacity = 0.0f;
     [Header("Interaction Text")]
+    public GameObject interactionParentObject;
     public Image interactionObjectBackground;
     public TMP_Text interactionObjectNameText;
     public TMP_Text interactionObjectPressEText;
@@ -26,6 +27,9 @@ public class UIManager : MonoBehaviour
     public float typewriterDelay = 0.01f;
     [Header("Photo Popup")]
     public Image photo;
+    [Header("In Game HUD")]
+    public Image logo;
+    public TMP_Text chapterTitle;
 
 
     void Awake()
@@ -59,7 +63,8 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // THIS IS BAD. NEVER DO THIS - Update Chapter ever freaking frame
+        chapterTitle.SetText(GameManager.instance.currentChapter.displayName);
     }
 
     public void ShowDialogBox ( Sprite background, Sprite foreground, string richText, Sprite speakerSprite = null )
