@@ -8,6 +8,7 @@ public class Phase1_MaskSelector : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Phase1_SelectableMask[] allMasks;
     public int numSelected = 0;
+    private bool isLoading = false;
 
     private void Awake()
     {
@@ -79,11 +80,19 @@ public class Phase1_MaskSelector : MonoBehaviour
                 //WIN
                 Debug.Log("WIN");
 
-                //TODO: Play Stinger
-
-
                 // Next chapter in 1 second -- UGH. NEVER USE INVOKE!
-                Invoke("LoadNext", 1.0f);
+                if (!isLoading) {
+                    // Save that we are loading
+                    isLoading = true;
+
+                    // Stop Player Movement
+                    GameManager.instance.SetPlayerMove(false);
+
+                    // TODO: Play Stinger
+
+                    // Delay and load
+                    Invoke("LoadNext", 1.0f);
+                }
             }
 
         }
@@ -92,6 +101,9 @@ public class Phase1_MaskSelector : MonoBehaviour
     public void LoadNext()
     {
         GameManager.instance.LoadNextChapter();
+        // Deactivate this object -- NOTE: I am assuming this is the parent object!!!!
+        closeUI();
+        GameManager.instance.SetPlayerMove(true);
     }
 
 }

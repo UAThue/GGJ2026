@@ -103,6 +103,10 @@ public class GameManager : MonoBehaviour
         if (currentChapter.nextChapter != null) {
             currentChapter.OnChapterEnd.Invoke();
 
+            // Move to next song
+            MusicPlayer._music.NextSong();
+
+            // Move to next level and run OnStart
             currentChapter = currentChapter.nextChapter;
             currentChapter.OnChapterStart.Invoke();
         }
