@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [Header("Objects for Cheap Jam Hacks")]
     public GameObject parentObjectForInnocents;
     public bool canPlayerMove = true;
+    public Vector3 playerStartLocation;
+
 
     [Header("Game Data")]
     public ChapterData startingChapter;
@@ -36,6 +38,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void MovePlayerToStart()
+    {
+        player.gameObject.transform.position = playerStartLocation;
     }
 
     public void SetPlayerMove(bool canMove)
@@ -110,6 +117,12 @@ public class GameManager : MonoBehaviour
             // Move to next song
             MusicPlayer._music.NextSong();
 
+            // Hide ALL the solution screens
+            UIManager.instance.HideChapter1SolutionUI();
+            UIManager.instance.HideChapter2SolutionUI();
+            UIManager.instance.HideChapter3SolutionUI();
+            UIManager.instance.HideChapter4SolutionUI();
+
             // Move to next level and run OnStart
             currentChapter = currentChapter.nextChapter;
             currentChapter.OnChapterStart.Invoke();
@@ -118,9 +131,10 @@ public class GameManager : MonoBehaviour
             //TODO: Load Game Over ? Or is that  just another chapter?
         }
 
-        
-
+        MovePlayerToStart();
         // I don't think anything else really needs to be done 
+
+
         // Is there an intro to the level? Move back to the starting point?  Not sure!
     }
 

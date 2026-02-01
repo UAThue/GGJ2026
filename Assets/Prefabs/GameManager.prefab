@@ -50,6 +50,7 @@ MonoBehaviour:
   currentChapter: {fileID: 11400000, guid: ec17406ca11dfac4abef865edc4df638, type: 2}
   parentObjectForInnocents: {fileID: 0}
   canPlayerMove: 1
+  playerStartLocation: {x: 0, y: 1.61, z: -10.2}
   startingChapter: {fileID: 11400000, guid: ec17406ca11dfac4abef865edc4df638, type: 2}
 --- !u!114 &3295328872583892913
 MonoBehaviour:

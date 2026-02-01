@@ -100,9 +100,16 @@ public class Phase1_MaskSelector : MonoBehaviour
 
     public void LoadNext()
     {
+        // Move player to root position
+
+
         GameManager.instance.LoadNextChapter();
         // Deactivate this object -- NOTE: I am assuming this is the parent object!!!!
         closeUI();
+
+        // Set the game up to use the next UI
+
+
         GameManager.instance.SetPlayerMove(true);
     }
 
