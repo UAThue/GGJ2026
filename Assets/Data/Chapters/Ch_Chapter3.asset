@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a824eb4c742b64cbf8ab80c8aba457, type: 3}
   m_Name: Ch_Chapter3
   m_EditorClassIdentifier: Assembly-CSharp::ChapterData
-  UID: 0
-  displayName: 'Chapter 3: Who''s Who of Mask Manipulation'
+  displayName: Chapter 3:\n Who's Who of Mask Manipulation
   nextChapter: {fileID: 11400000, guid: cb3d1a237f0b3b042b1dd73c5f998b38, type: 2}

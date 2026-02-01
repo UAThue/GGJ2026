@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a824eb4c742b64cbf8ab80c8aba457, type: 3}
   m_Name: Ch_Chapter4
   m_EditorClassIdentifier: Assembly-CSharp::ChapterData
-  UID: 0
-  displayName: 'Chapter 4: See You in Court'
+  displayName: Chapter 4:\n Unmasking the Evidence
   nextChapter: {fileID: 0}
