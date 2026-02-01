@@ -21,7 +21,8 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: I get these things must be expensive, but why's someone gotta ruin
+    the event with a stunt like this. Even Nicole wouldn't stoop this low.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

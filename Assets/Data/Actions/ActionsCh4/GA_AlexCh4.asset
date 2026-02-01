@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: Frankie? The guy over there? He's a weird one, apparently will never
+    wear any colors related to Halloween. Trauma of some sort? Or just too much of
+    a fshionista.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

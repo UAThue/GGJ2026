@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: My mask? I traded it with someone since it seems we both came with
+    the incorrect color. A <b>green</b> for (insert traded color) is an amazing offer,
+    don't you think?
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

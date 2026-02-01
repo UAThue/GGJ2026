@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcf689500b3c4144ca0990fec2888de8, type: 3}
-  m_Name: GA_ChrisCh2
+  m_Name: GA_WaveCrushmanCh2
   m_EditorClassIdentifier: Assembly-CSharp::GA_ShowDialog
   OnInvoke:
     m_PersistentCalls:
@@ -21,7 +21,8 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: I'm lucky I only live a few minutes away brah. I had to use the bathroom
+    but it was locked! I managed to get home <i>just in time</i>!
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

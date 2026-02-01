@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: 'No_Input
+
+'
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

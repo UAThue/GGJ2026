@@ -21,7 +21,8 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: Don't look at me like I'm guilty, only thing I <i>may</i> have nabbed
+    was an extra plate of food. Okay, it may have been two plates.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

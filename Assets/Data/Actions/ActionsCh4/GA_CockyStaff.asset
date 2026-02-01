@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcf689500b3c4144ca0990fec2888de8, type: 3}
-  m_Name: GA_ChrisCh4
+  m_Name: GA_CockyStaff
   m_EditorClassIdentifier: Assembly-CSharp::GA_ShowDialog
   OnInvoke:
     m_PersistentCalls:
@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: You wanted to know who was wearing a violet mask? Heh, try speaking
+    to that renowned pastry wanabe making a <i>mockery</i> of themselves through
+    the night.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

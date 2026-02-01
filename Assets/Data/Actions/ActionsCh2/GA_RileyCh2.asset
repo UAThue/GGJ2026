@@ -21,7 +21,8 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: The badge photographer was taking high definition photos of <i>everyone</i>!
+    Really high definition on top of it.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

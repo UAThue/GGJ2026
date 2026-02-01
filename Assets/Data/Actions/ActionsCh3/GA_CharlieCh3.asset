@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: During the meal, very few people had paid for the catering food. Most
+    people had already filled up on pastries! So guests used that time to go looking
+    around. It was <b>prime</b> mask-spotting time!
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: During the martial arts competition, people were pushed into random
+    rooms! And they pulled random people into the center. There was '<b>hyahs!</b>'
+    and so many broken boards! It was <b>chaos</b>! But so cool! Just like the show!
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

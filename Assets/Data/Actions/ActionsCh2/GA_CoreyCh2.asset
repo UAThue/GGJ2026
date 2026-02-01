@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: The said pastry chef attending tonight was supposedly able to re-create
+    anything in pastry, but when I asked him to remake the Mona Lisa, he said he
+    couldn't without a high definition picture. <i>What a scam</i>!
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

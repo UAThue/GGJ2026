@@ -21,7 +21,8 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: Pastry Chef.. Camera Hacker.. Acutioneer Braniac? Can't say I've seen
+    any with a black mask at tonights gathering.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

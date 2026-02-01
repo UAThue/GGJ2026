@@ -21,7 +21,10 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: To access the office computers, you have to read a number from your
+    phone into a microphone. If the curator's computer was involved, it <b>HAD</b>
+    to be an inside job... brute forcing it by reading all the possible numbers would
+    take way too long otherwise!
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

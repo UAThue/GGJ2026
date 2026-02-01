@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: For the autograph session, they had all the actors pose with their
+    masks! Nobody wanted to miss an autograph! I saw everyone except green. They
+    closed his room because he was missing until later.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

@@ -21,7 +21,10 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: For the first ten minutes of the hour, there was some kind of commotion
+    going on in the center area with loud shouting and glass shattering. I was too
+    busy to pay attention given I was filling in as a caterer with preparing dinner
+    which came right after. Did I just want the food to come out faster? Possibly.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []
