@@ -50,6 +50,14 @@ public class Phase3_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Test using escape to open menu
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Esc Pressed");
+            if (phase3UI.activeSelf == false)
+            {
+                OpenUI();
+            }
+        }
     }
 }

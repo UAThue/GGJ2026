@@ -13,13 +13,13 @@ public class ChapterComplete : MonoBehaviour
     public TMP_Text newChapterText;
     public TMP_Text[] summationList;
 
-    [TextArea(15, 10)]
+    [TextArea(5, 10)]
     public string[] pregame1;
-    [TextArea(15, 10)]
+    [TextArea(5, 10)]
     public string[] summationList1;
-    [TextArea(15, 10)]
+    [TextArea(5, 10)]
     public string[] summationList2;
-    [TextArea(15, 10)]
+    [TextArea(5, 10)]
     public string[] summationList3;
 
 
@@ -57,29 +57,15 @@ public class ChapterComplete : MonoBehaviour
             case ScreenStates.idle:
                 //Waiting
                 break;
+            case ScreenStates.theCaseBegins:
+                currentChapter = 0;
+                currentScreenState = ScreenStates.fadeBlackIn;
+                break;
             case ScreenStates.fadeBlackIn:
                 lerper += Time.deltaTime;
                 blackScreenFade.color = Color.Lerp(Color.clear, Color.black, lerper);
                 if (lerper >= 1)
                 {
-                    currentScreenState = ScreenStates.chapterCompleteText;
-                    lerper = 0;
-                }
-                break;
-            case ScreenStates.chapterCompleteText:
-                lerper += Time.deltaTime;
-                if (lerper > .3f)
-                {
-                    chapterCompleteText.gameObject.SetActive(true);
-                }
-                if (lerper > 1.2f)
-                {
-                    chapterCompleteText.gameObject.SetActive(false);
-                }
-                if (lerper > 1.5f)
-                {
-                    currentScreenState = ScreenStates.summation1;
-                    lerper = 0;
                     // Set up summation
                     for (int i = 0; i < 4; i++)
                     {
@@ -100,6 +86,31 @@ public class ChapterComplete : MonoBehaviour
                             summationList[i].text = summationList3[i];
                         }
                     }
+                    if (currentChapter == 0)
+                    {
+                        currentScreenState = ScreenStates.summation1;
+                    }
+                    else
+					{
+                        currentScreenState = ScreenStates.chapterCompleteText;
+                    }
+                    lerper = 0;
+                }
+                break;
+            case ScreenStates.chapterCompleteText:
+                lerper += Time.deltaTime;
+                if (lerper > .3f)
+                {
+                    chapterCompleteText.gameObject.SetActive(true);
+                }
+                if (lerper > 1.2f)
+                {
+                    chapterCompleteText.gameObject.SetActive(false);
+                }
+                if (lerper > 1.5f)
+                {
+                    currentScreenState = ScreenStates.summation1;
+                    lerper = 0;
                 }
                 break;
             case ScreenStates.summation1:
@@ -114,9 +125,9 @@ public class ChapterComplete : MonoBehaviour
 				else
 				{
                     //Skip.
-                    lerper = 3f;
+                    lerper = 3.5f;
 				}
-                if (lerper > 3f)
+                if (lerper > 3.5f)
                 {
                     lerper = 0;
                     currentScreenState = ScreenStates.summation2;
@@ -134,9 +145,9 @@ public class ChapterComplete : MonoBehaviour
                 else
                 {
                     //Skip.
-                    lerper = 3f;
+                    lerper = 3.5f;
                 }
-                if (lerper > 3f)
+                if (lerper > 3.5f)
                 {
                     lerper = 0;
                     currentScreenState = ScreenStates.summation3;
@@ -154,9 +165,9 @@ public class ChapterComplete : MonoBehaviour
                 else
                 {
                     //Skip.
-                    lerper = 3f;
+                    lerper = 3.5f;
                 }
-                if (lerper > 3f)
+                if (lerper > 3.5f)
                 {
                     lerper = 0;
                     currentScreenState = ScreenStates.summation4;
@@ -174,13 +185,13 @@ public class ChapterComplete : MonoBehaviour
                 else
                 {
                     //Skip.
-                    lerper = 3f;
+                    lerper = 3.5f;
                 }
-                if (lerper > 4f)
+                if (lerper > 5f)
                 {
                     lerper = 0;
                     currentScreenState = ScreenStates.switchToLogicGrid;
-                    for (int i = 0; i < 3; i++)
+                    for (int i = 0; i < 4; i++)
                     {
                         summationList[i].text = "";
                         summationList[i].gameObject.SetActive(false);
@@ -188,25 +199,37 @@ public class ChapterComplete : MonoBehaviour
                 }
                 break;
             case ScreenStates.switchToLogicGrid:
-                //Waiting
-                Phase4Manager_Grid._phase4Grid.BringUpUI();
-                Phase4Manager_Grid._phase4Grid.go = true;
+                if (Phase4Manager_Grid._phase4Grid != null)
+                {
+                    //Waiting
+                    Phase4Manager_Grid._phase4Grid.BringUpUI();
+                    Phase4Manager_Grid._phase4Grid.go = true;
+				}
+				else
+				{
+                    currentScreenState = ScreenStates.newChapterText;
+
+                }
                 break;
             case ScreenStates.fadeOutLogicGrid:
                 //Waiting
-                if (Phase4Manager_Grid._phase4Grid.go == false)
+                if (Phase4Manager_Grid._phase4Grid != null)
                 {
-                    lerper += Time.deltaTime;
-                }
-                if(lerper>3)
-                {
-                    Phase4Manager_Grid._phase4Grid.CloseUI();
-                    lerper = 0;
-                    currentScreenState = ScreenStates.newChapterText;
+                    if (Phase4Manager_Grid._phase4Grid.go == false)
+                    {
+                        lerper += Time.deltaTime;
+                    }
+                    if (lerper > 3)
+                    {
+                        Phase4Manager_Grid._phase4Grid.CloseUI();
+                        lerper = 0;
+                        currentScreenState = ScreenStates.newChapterText;
+                    }
                 }
                 break;
             case ScreenStates.newChapterText:
                 lerper += Time.deltaTime;
+                newChapterText.text = string.Format("Chapter {0}", currentChapter + 1);
                 if (lerper > .3f)
                 {
                     newChapterText.gameObject.SetActive(true);

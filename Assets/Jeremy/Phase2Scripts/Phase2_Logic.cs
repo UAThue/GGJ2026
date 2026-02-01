@@ -47,6 +47,15 @@ public class Phase2_Logic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Test using escape to open menu
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Esc Pressed");
+            if (solve.activeSelf == false)
+            {
+                SolveOnScreen();
+            }
+        }
         if (solve.activeSelf == true)
         {
             //while this is open listen for it to be true.

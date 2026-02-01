@@ -492,7 +492,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1911709206}
+      - m_Target: {fileID: 159666558}
         m_TargetAssemblyTypeName: Phase3_Manager, Assembly-CSharp
         m_MethodName: TimeButtons
         m_Mode: 3
@@ -1584,6 +1584,7 @@ GameObject:
   - component: {fileID: 159666556}
   - component: {fileID: 159666555}
   - component: {fileID: 159666554}
+  - component: {fileID: 159666558}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1675,6 +1676,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &159666558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159666553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f3c45b1142f93c4a94a64b8faf08378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Phase3_Manager
+  phase3UI: {fileID: 2023915310}
+  maps:
+  - {fileID: 1075642370}
+  - {fileID: 2126273323}
+  - {fileID: 1813278334}
+  - {fileID: 1805321227}
+  - {fileID: 877972881}
+  - {fileID: 448398767}
 --- !u!1 &168564623
 GameObject:
   m_ObjectHideFlags: 0
@@ -2536,7 +2557,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1911709206}
+      - m_Target: {fileID: 159666558}
         m_TargetAssemblyTypeName: Phase3_Manager, Assembly-CSharp
         m_MethodName: TimeButtons
         m_Mode: 3
@@ -4355,7 +4376,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1911709206}
+      - m_Target: {fileID: 159666558}
         m_TargetAssemblyTypeName: Phase3_Manager, Assembly-CSharp
         m_MethodName: OpenUI
         m_Mode: 1
@@ -7378,7 +7399,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1911709206}
+      - m_Target: {fileID: 159666558}
         m_TargetAssemblyTypeName: Phase3_Manager, Assembly-CSharp
         m_MethodName: TimeButtons
         m_Mode: 3
@@ -9192,7 +9213,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1911709206}
+      - m_Target: {fileID: 159666558}
         m_TargetAssemblyTypeName: Phase3_Manager, Assembly-CSharp
         m_MethodName: TimeButtons
         m_Mode: 3
@@ -12403,7 +12424,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1911709206}
+      - m_Target: {fileID: 159666558}
         m_TargetAssemblyTypeName: Phase3_Manager, Assembly-CSharp
         m_MethodName: TimeButtons
         m_Mode: 3
@@ -13427,7 +13448,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1911709206}
+      - m_Target: {fileID: 159666558}
         m_TargetAssemblyTypeName: Phase3_Manager, Assembly-CSharp
         m_MethodName: CloseUI
         m_Mode: 1
@@ -15530,7 +15551,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1911709206}
+      - m_Target: {fileID: 159666558}
         m_TargetAssemblyTypeName: Phase3_Manager, Assembly-CSharp
         m_MethodName: TimeButtons
         m_Mode: 3
@@ -17767,7 +17788,6 @@ GameObject:
   - component: {fileID: 1911709205}
   - component: {fileID: 1911709204}
   - component: {fileID: 1911709207}
-  - component: {fileID: 1911709206}
   m_Layer: 5
   m_Name: Time Chooser
   m_TagString: Untagged
@@ -17846,26 +17866,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911709202}
   m_CullTransparentMesh: 1
---- !u!114 &1911709206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911709202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f3c45b1142f93c4a94a64b8faf08378, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Phase3_Manager
-  phase3UI: {fileID: 2023915310}
-  maps:
-  - {fileID: 1075642370}
-  - {fileID: 2126273323}
-  - {fileID: 1813278334}
-  - {fileID: 1805321227}
-  - {fileID: 877972881}
-  - {fileID: 448398767}
 --- !u!114 &1911709207
 MonoBehaviour:
   m_ObjectHideFlags: 0

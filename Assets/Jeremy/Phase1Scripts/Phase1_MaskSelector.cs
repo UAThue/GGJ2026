@@ -22,6 +22,8 @@ public class Phase1_MaskSelector : MonoBehaviour
         }
     }
 
+    
+
     public void openUI()
     {
         phase1UI.SetActive(true);
@@ -36,8 +38,18 @@ public class Phase1_MaskSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Check for win
-        int winCount = 0;
+        //Test using escape to open menu
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Esc Pressed");
+            if (phase1UI.activeSelf == false)
+			{
+                openUI();
+			}
+        }
+
+       //Check for win
+       int winCount = 0;
         foreach(Phase1_SelectableMask m in allMasks)
 		{
             if(m.myMaskColor == Phase1_SelectableMask.maskColors.black)
