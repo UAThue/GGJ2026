@@ -16,6 +16,7 @@ public class Phase2_Dropdowns : MonoBehaviour
     public TMP_Dropdown d4a;
     public TMP_Dropdown d4b;
 
+    private bool isLoading = false;
 
 
     // Update is called once per frame
@@ -104,8 +105,32 @@ public class Phase2_Dropdowns : MonoBehaviour
         }
         if (correct == 4)
 		{
-            //Finished
-            Debug.Log("got it");
-		}
+            if (!isLoading) {
+                // Save that we are loading
+                isLoading = true;
+
+                // Stop Player Movement
+                GameManager.instance.SetPlayerMove(false);
+
+                // TODO: Play Stinger
+
+                // Delay and load
+                Invoke("LoadNext", 1.0f);
+            }
+        }
     }
+
+    public void LoadNext()
+    {
+
+        // Set the game up to use the next UI
+        GameManager.instance.LoadNextChapter();
+
+        // Deactivate this object -- NOTE: I am assuming this is the Chapter 2!
+        UIManager.instance.HideChapter2SolutionUI();
+
+
+        GameManager.instance.SetPlayerMove(true);
+    }
+
 }
