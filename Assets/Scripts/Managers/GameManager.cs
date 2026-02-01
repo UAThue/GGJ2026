@@ -4,17 +4,29 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance; // Singleton
+    
+    [Header("Important Objcts")] // NOTE: Keep this section as light as possible, please!
+    public ControllerPlayer player;
     public ChapterData currentChapter; // What chapter are we currently in? 
+
+    [Header("Game Data")]
+    public ChapterData startingChapter;
 
     void Awake()
     {
-        // TODO: Make singleton
+        // Make Singleton
+        if (instance == null) {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else {
+            Destroy(gameObject);
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
