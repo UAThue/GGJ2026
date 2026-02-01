@@ -77,14 +77,14 @@ public class Phase4Manager_Grid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameManager.instance.currentChapter!= finalChapter)
+        /*if(GameManager.instance.currentChapter!= finalChapter)
 		{
             closeButton.gameObject.SetActive(false);
 		}
 		else
 		{
             closeButton.gameObject.SetActive(true);
-        }
+        }*/
         if (go == true)
 		{
             switch(myCurrentState)
