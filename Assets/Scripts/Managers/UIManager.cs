@@ -21,6 +21,9 @@ public class UIManager : MonoBehaviour
     public Image dialogBoxBackground;
     public Image dialogBoxOverlay;
     public TMP_Text dialogueBoxText; //What is being said
+    public Image dialogBoxSpeaker;
+    public Animator dialogBoxAnimator;
+    public float typewriterDelay = 0.01f;
     [Header("Photo Popup")]
     public Image photo;
 
@@ -57,6 +60,59 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ShowDialogBox ( Sprite background, Sprite foreground, string RichText, Sprite speakerSprite = null )
+    {
+        // Set the background and foreground images
+        dialogBoxBackground.sprite = background;
+        dialogBoxOverlay.sprite = foreground;
+
+        // Set the text to 0 so we can typewriter
+        dialogueBoxText.maxVisibleCharacters = 0;
+
+        // Raise up the animator
+        AnimRise();
+
+        // If speaker sprite is null, turn off the box
+        if (speakerSprite == null) {
+            dialogBoxSpeaker.gameObject.SetActive(false);
+        } else {
+            // Otherwise, show the speaker sprite
+            dialogBoxSpeaker.sprite = speakerSprite;
+            dialogBoxSpeaker.gameObject.SetActive(true);
+        }
+
+
+    }
+
+    private void AnimRise()
+    {
+        //TODO: Take movement control from player
+        dialogBoxAnimator.SetTrigger("EnterDialogue");
+    }
+
+    public void AnimFall()
+    {
+        //TODO: Return control to the player
+        dialogBoxAnimator.SetTrigger("ExitDialogue");
+    }
+
+    public void StartTypewriter()
+    {
+        StartCoroutine(Typewriter());
+    }
+
+    IEnumerator Typewriter()
+    {
+        // Add one to the text 
+        dialogueBoxText.maxVisibleCharacters++;
+
+        yield return new WaitForSeconds(typewriterDelay);
+
+        if (dialogueBoxText.maxVisibleCharacters < dialogueBoxText.text.Length) {
+            StartCoroutine(Typewriter());
+        }
     }
 
     public void ShowInteractionText(string name = "", string interactionText = "<i>Press E to Interact</i>")

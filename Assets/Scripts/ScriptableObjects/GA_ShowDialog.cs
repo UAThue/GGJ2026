@@ -12,10 +12,8 @@ public class GA_ShowDialog : GameAction
 {
     [Header("Visuals")]
     public Sprite overlay; // Any photo over the top of the dialog? If we put characters, they go here. Optional)  
-    public Color fgColor; //Designated color of the foreground
     public Sprite background; // The background image of the dialog box. Have default, maybe?
-    public Color bgColor; //Designated color of the background
-    [TextArea] public string DialogText; // For now, dialogs are just one set of text.
+    [TextArea] public string dialogText; // For now, dialogs are just one set of text.
     public Sprite speakerSprite; //Visual of who is speaking
     [Header("Sounds")]
     public List<AudioClip> invokeSounds;
@@ -36,10 +34,8 @@ public class GA_ShowDialog : GameAction
 
     public override void Invoke()
     {
-        //TODO: Change the text on the dialog box
-        //TODO: Change the background on the dialog box
-        //TODO: Change the overlay image over the dialog window
-        //TODO: Show (or start showing) the dialog window
+        //Show the UI
+        UIManager.instance.ShowDialogBox(background, overlay, dialogText, speakerSprite);
 
         if (invokeSounds.Count > 0) {
             //TODO: Play all the sounds ( Sequentially? Parallel? I don't know! Need to solve this design! )
