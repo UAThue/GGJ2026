@@ -53,6 +53,7 @@ public class GA_ShowDialog : GameAction
     public override void Cancel()
     {
         //TODO: Hide (or start hiding) the photo in the UI, probably via UI manager
+        UIManager.instance.HideDialogBox();
 
         if (cancelSounds.Count > 0) 
         {

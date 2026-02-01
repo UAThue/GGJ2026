@@ -31,10 +31,15 @@ public class InteractableObject : MonoBehaviour
         // Get the list of all interaction actions for this chapter
         List<GameAction> temp = interactionActions.FindAll(GameManager.instance.currentChapter);
 
+        // Cancel if no actions
+        if (temp == null) return;
+
         // Perform them all
         foreach (GameAction action in temp) {
-            if (!action.isActive) {
-                action.Invoke();
+            if (action != null) {
+                if (!action.isActive) {
+                    action.Invoke();
+                }
             }
         }
     }
@@ -42,11 +47,18 @@ public class InteractableObject : MonoBehaviour
     {
         // Get the list of all interaction actions for this chapter
         List<GameAction> temp = interactionActions.FindAll(GameManager.instance.currentChapter);
+        
+        // Cancel if no actions
+        if (temp == null) return;
 
         // Perform them all
-        foreach (GameAction action in temp) {
-            if (action.isActive) {
-                action.Cancel();
+        if (temp.Count > 0) {
+            foreach (GameAction action in temp) {
+                if (action != null) {
+                    if (action.isActive) {
+                        action.Cancel();
+                    }
+                }
             }
         }
     }
@@ -57,11 +69,17 @@ public class InteractableObject : MonoBehaviour
         //        but things like "show the E to interact text" 
         // Get a list of all the game actions for the current chapter
         List<GameAction> temp = rangeActions.FindAll(GameManager.instance.currentChapter);
+
+        // Cancel if no actions
+        if (temp == null) return;
+
         // Perform them all
-        foreach (GameAction action in temp) {
-            // Only invoke actions that aren't already invoked!
-            if (!action.isActive) {
-                action.Invoke();
+        if (temp.Count > 0) {
+            foreach (GameAction action in temp) {
+                // Only invoke actions that aren't already invoked!
+                if (!action.isActive) {
+                    action.Invoke();
+                }
             }
         }
     }
@@ -70,6 +88,10 @@ public class InteractableObject : MonoBehaviour
     {
         //Call the "cancel" actions for this action ( so text/photo goes away when we leave trigger)
         List<GameAction> temp = rangeActions.FindAll(GameManager.instance.currentChapter);
+
+        // Cancel if no actions
+        if (temp == null) return;
+
         // Perform them all
         foreach (GameAction action in temp) {
             // If running, cancel it - don't cancel things that aren't running

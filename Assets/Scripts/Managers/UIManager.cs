@@ -62,11 +62,14 @@ public class UIManager : MonoBehaviour
         
     }
 
-    public void ShowDialogBox ( Sprite background, Sprite foreground, string RichText, Sprite speakerSprite = null )
+    public void ShowDialogBox ( Sprite background, Sprite foreground, string richText, Sprite speakerSprite = null )
     {
         // Set the background and foreground images
         dialogBoxBackground.sprite = background;
         dialogBoxOverlay.sprite = foreground;
+
+        // Set the dialog text
+        dialogueBoxText.SetText(richText);
 
         // Set the text to 0 so we can typewriter
         dialogueBoxText.maxVisibleCharacters = 0;
@@ -82,9 +85,14 @@ public class UIManager : MonoBehaviour
             dialogBoxSpeaker.sprite = speakerSprite;
             dialogBoxSpeaker.gameObject.SetActive(true);
         }
-
-
     }
+
+    public void HideDialogBox()
+    {
+        // Lower the dialog
+        AnimFall();
+    }
+
 
     private void AnimRise()
     {
