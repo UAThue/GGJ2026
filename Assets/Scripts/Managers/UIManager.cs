@@ -33,7 +33,11 @@ public class UIManager : MonoBehaviour
     public GameObject HUDObject;
     public Image logo;
     public TMP_Text chapterTitle;
-
+    [Header("Solution Entry UIs")]
+    public GameObject Chapter1SolutionObject;
+    public GameObject Chapter2SolutionObject;
+    public GameObject Chapter3SolutionObject;
+    public GameObject Chapter4SolutionObject;
 
     void Awake()
     {
@@ -45,8 +49,50 @@ public class UIManager : MonoBehaviour
         else {
             Destroy(gameObject);
         }
-
     }
+
+    public void ShowChapter1SolutionUI()
+    {
+        GameManager.instance.SetPlayerMove(false);
+        Chapter1SolutionObject.SetActive(true);
+    }
+    public void ShowChapter2SolutionUI()
+    {
+        GameManager.instance.SetPlayerMove(false);
+        Chapter2SolutionObject.SetActive(true);
+    }
+    public void ShowChapter3SolutionUI()
+    {
+        GameManager.instance.SetPlayerMove(false);
+        Chapter3SolutionObject.SetActive(true);
+    }
+    public void ShowChapter4SolutionUI()
+    {
+        GameManager.instance.SetPlayerMove(false);
+        Chapter4SolutionObject.SetActive(true);
+    }
+
+    public void HideChapter1SolutionUI()
+    {
+        GameManager.instance.SetPlayerMove(true);
+        Chapter1SolutionObject.SetActive(false);
+    }
+    public void HideChapter2SolutionUI()
+    {
+        GameManager.instance.SetPlayerMove(true);
+        Chapter2SolutionObject.SetActive(false);
+    }
+    public void HideChapter3SolutionUI()
+    {
+        GameManager.instance.SetPlayerMove(true);
+        Chapter3SolutionObject.SetActive(false);
+    }
+    public void HideChapter4SolutionUI()
+    {
+        GameManager.instance.SetPlayerMove(true);
+        Chapter4SolutionObject.SetActive(false);
+    }
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -65,8 +111,15 @@ public class UIManager : MonoBehaviour
         // Hide dialog box
         HideDialogBox();
 
-        //TODO: Hide HUD
-        
+        // Hide all solutions
+        HideChapter1SolutionUI();
+        HideChapter2SolutionUI();
+        HideChapter3SolutionUI();
+        HideChapter4SolutionUI();
+
+        //Hide HUD
+        HideHUD();
+
     }
 
     // Update is called once per frame
@@ -74,6 +127,16 @@ public class UIManager : MonoBehaviour
     {
         // THIS IS BAD. NEVER DO THIS - Update Chapter ever freaking frame
         chapterTitle.SetText(GameManager.instance.currentChapter.displayName);
+    }
+
+    public void ShowHUD()
+    {
+        HUDObject.SetActive(true);
+    }
+
+    public void HideHUD()
+    {
+        HUDObject.SetActive(false);
     }
 
     public void ShowDialogBox ( Sprite background, Sprite foreground, string richText, Sprite speakerSprite )

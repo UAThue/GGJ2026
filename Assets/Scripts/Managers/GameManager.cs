@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public ChapterData currentChapter; // What chapter are we currently in? 
     [Header("Objects for Cheap Jam Hacks")]
     public GameObject parentObjectForInnocents;
+    public bool canPlayerMove = true;
 
     [Header("Game Data")]
     public ChapterData startingChapter;
@@ -37,6 +38,20 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void SetPlayerMove(bool canMove)
+    {
+        canPlayerMove = canMove;
+
+        if (canMove) {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
     void InitializeGame()
     {
         //TODO: Start a new game session - clear any data, set everything to starting data. 
@@ -53,7 +68,7 @@ public class GameManager : MonoBehaviour
             currentChapter.OnChapterStart.Invoke();
         }
         else {
-            //TODO: Load Game Over ?
+            //TODO: Load Game Over ? Or is that  just another chapter?
         }
 
         
@@ -61,6 +76,8 @@ public class GameManager : MonoBehaviour
         // I don't think anything else really needs to be done 
         // Is there an intro to the level? Move back to the starting point?  Not sure!
     }
+
+
 
     public static void DestroyTheInnocents()
     {
