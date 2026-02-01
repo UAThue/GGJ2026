@@ -23,13 +23,16 @@ public class UIManager : MonoBehaviour
         else {
             Destroy(gameObject);
         }
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // Set the vignette to the right color
-        vignette.color = Color.white;
+        Color newColor = Color.white;
+        newColor.a = 0;
+        vignette.color = newColor;
     }
 
     // Update is called once per frame
