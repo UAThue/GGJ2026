@@ -22,7 +22,7 @@ MonoBehaviour:
   overlay: {fileID: 21300000, guid: 7c6c85129d8685c4c914c1dd4e95a72d, type: 3}
   background: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogText: Can I go yet? I have hours of laziness to catch up on.
-  speakerSprite: {fileID: 21300000, guid: 2fec9a02350791d4fa8ef2748ab2e949, type: 3}
+  speakerSprite: {fileID: 21300000, guid: 8d1ebf775f19362409625125db9afa8f, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}

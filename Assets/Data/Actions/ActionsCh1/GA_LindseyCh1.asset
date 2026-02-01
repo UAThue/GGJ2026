@@ -24,7 +24,7 @@ MonoBehaviour:
   dialogText: My mask? I traded it with someone since it seems we both came with
     the incorrect color. A <b>green</b> for (insert traded color) is an amazing offer,
     don't you think?
-  speakerSprite: {fileID: 21300000, guid: b286d96745f39734da0602e2c337c3c5, type: 3}
+  speakerSprite: {fileID: 21300000, guid: 193081e3323dc8048aede73074ec1704, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}

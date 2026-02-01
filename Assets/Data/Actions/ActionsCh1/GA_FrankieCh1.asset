@@ -23,7 +23,7 @@ MonoBehaviour:
   background: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogText: Tch, why should <i>I</i> of all people be here and not at the gym?!
     This is a <b>waste</b> of my time!
-  speakerSprite: {fileID: 21300000, guid: 26d62de6e5dac374daba10c6b41eb77c, type: 3}
+  speakerSprite: {fileID: 21300000, guid: 8d1ebf775f19362409625125db9afa8f, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}

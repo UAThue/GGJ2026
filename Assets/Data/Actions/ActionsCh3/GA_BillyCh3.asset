@@ -19,13 +19,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActive: 0
-  overlay: {fileID: 0}
-  background: {fileID: 0}
+  overlay: {fileID: 21300000, guid: 7c6c85129d8685c4c914c1dd4e95a72d, type: 3}
+  background: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogText: For the first ten minutes of the hour, there was some kind of commotion
     going on in the center area with loud shouting and glass shattering. I was too
     busy to pay attention given I was filling in as a caterer with preparing dinner
     which came right after. Did I just want the food to come out faster? Possibly.
-  speakerSprite: {fileID: 0}
+  speakerSprite: {fileID: 21300000, guid: 6206d9b8fd57378419efbfaa5ae0f5a6, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}

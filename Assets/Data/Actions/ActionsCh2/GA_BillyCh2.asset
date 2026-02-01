@@ -19,12 +19,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActive: 0
-  overlay: {fileID: 0}
-  background: {fileID: 0}
+  overlay: {fileID: 21300000, guid: 7c6c85129d8685c4c914c1dd4e95a72d, type: 3}
+  background: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogText: I <b>swear<b/> I saw one of the badgers pull a human eye from the trash
     near the basement door and scarf it down! I am <b>NOT</b> crazy! I told an animal
     trainer I met here and he said that badgers don't eat flesh! <b>BUT I SAW IT</b>!
-  speakerSprite: {fileID: 0}
+  speakerSprite: {fileID: 21300000, guid: 6206d9b8fd57378419efbfaa5ae0f5a6, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}

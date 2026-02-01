@@ -19,12 +19,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActive: 0
-  overlay: {fileID: 0}
-  background: {fileID: 0}
+  overlay: {fileID: 21300000, guid: 7c6c85129d8685c4c914c1dd4e95a72d, type: 3}
+  background: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogText: We cheaped out and the camera computer system is in spanish. You'd
     need to know how to speak spanish to hack it. Apparently that's what every worker
     is saying.
-  speakerSprite: {fileID: 0}
+  speakerSprite: {fileID: 21300000, guid: a671e2f993f48614b85dca5fb56cca13, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}

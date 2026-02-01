@@ -23,7 +23,7 @@ MonoBehaviour:
   background: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogText: The best part about the Masks is the backstory. Every tiny detail tells
     you about the history of the heroes that wore them throughout history!
-  speakerSprite: {fileID: 21300000, guid: 957e85f445a7b4d45a94a9bdc7639b36, type: 3}
+  speakerSprite: {fileID: 21300000, guid: 071521b23f9599b40a3042a3c4b89292, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}

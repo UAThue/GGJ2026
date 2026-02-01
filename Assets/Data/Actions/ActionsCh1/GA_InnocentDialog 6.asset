@@ -23,7 +23,7 @@ MonoBehaviour:
   background: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogText: These masks are worth way more than anyone would imagine. I can see
     why someone would steal them.
-  speakerSprite: {fileID: 21300000, guid: 3a4bf70af26ac6740aa52f97fa941fea, type: 3}
+  speakerSprite: {fileID: 21300000, guid: 7a1150e8f62ad4f4db4c4298c1ee853b, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}

@@ -24,7 +24,7 @@ MonoBehaviour:
   dialogText: I do social media for the biggest Masks fan site on the internet! I
     may get some things wrong from time-to-time, but 50 million followers can't be
     wrong!
-  speakerSprite: {fileID: 21300000, guid: 8f328b2b78ff0134c8455acd212ec1e3, type: 3}
+  speakerSprite: {fileID: 21300000, guid: 98362ecad0433e14c97cd71f30000a2f, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}

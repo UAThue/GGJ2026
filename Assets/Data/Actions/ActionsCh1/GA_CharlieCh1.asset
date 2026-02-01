@@ -24,7 +24,7 @@ MonoBehaviour:
   dialogText: Suppose my pastry skills were enough to require me to stay here, I
     don't mind going on for hours upon my creations. I don't recall you at the party,
     wanna try one while you're here?
-  speakerSprite: {fileID: 21300000, guid: 59c5f1e476ecd944ba7f4b88ac70341e, type: 3}
+  speakerSprite: {fileID: 21300000, guid: a671e2f993f48614b85dca5fb56cca13, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}

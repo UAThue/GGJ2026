@@ -23,7 +23,7 @@ MonoBehaviour:
   background: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogText: I once binge watched every episode just to look at the masks. If only
     I could find a way to zoom in on my TV and get more detail.
-  speakerSprite: {fileID: 21300000, guid: 25d9280834681d640af80cfef9cc2607, type: 3}
+  speakerSprite: {fileID: 21300000, guid: 98362ecad0433e14c97cd71f30000a2f, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}

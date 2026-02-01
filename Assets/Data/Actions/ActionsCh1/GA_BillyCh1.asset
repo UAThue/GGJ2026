@@ -23,7 +23,7 @@ MonoBehaviour:
   background: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogText: I get these things must be expensive, but why's someone gotta ruin
     the event with a stunt like this. Even Nicole wouldn't stoop this low.
-  speakerSprite: {fileID: 21300000, guid: 3158f95855a890b479ffde83c87ddb66, type: 3}
+  speakerSprite: {fileID: 21300000, guid: 6206d9b8fd57378419efbfaa5ae0f5a6, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}

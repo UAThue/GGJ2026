@@ -19,8 +19,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActive: 0
-  overlay: {fileID: 0}
-  background: {fileID: 0}
+  overlay: {fileID: 21300000, guid: 7c6c85129d8685c4c914c1dd4e95a72d, type: 3}
+  background: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogText: I'm lucky I only live a few minutes away brah. I had to use the bathroom
     but it was locked! I managed to get home <i>just in time</i>!
   speakerSprite: {fileID: 0}
