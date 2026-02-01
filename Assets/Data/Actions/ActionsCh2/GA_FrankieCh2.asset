@@ -21,7 +21,10 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: The bathroom was locked for almost <b>an hour</b> during the auction!
+    I complained to the curator multiple times! When I finally got to go, there were
+    scrabs of thread and fabric everywhere as well as a phone. It's at the lost and
+    found now.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

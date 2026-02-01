@@ -21,7 +21,8 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: Ay, you must be the detective we have been waiting for, some mask stealing
+    scheme, gotta wonder the guts some people have to pull it off at a public event.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

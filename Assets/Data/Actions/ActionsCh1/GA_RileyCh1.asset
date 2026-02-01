@@ -21,7 +21,7 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: Oh, hello. Mind putting that curator at ease so we could leave?
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

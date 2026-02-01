@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: When that... <i>thing</i> appeared, anyone that hadn't been in a mask
+    room all kinda fled into one because it was pretty scary. I've never seen one
+    in real life.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

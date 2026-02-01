@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: I have seen the curator's computer. It's impossibly complicated and
+    everything is a mess. You'd need to be a genius or insane to use it. Or <i>both</i>!
+    I think it was an inside job.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

@@ -21,7 +21,8 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: Tch, why should <i>I</i> of all people be here and not at the gym?!
+    This is a <b>waste</b> of my time!
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

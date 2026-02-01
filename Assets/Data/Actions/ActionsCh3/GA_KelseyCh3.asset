@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: Right after the... well the <i>big</i> surprise happened... the green
+    mask actor appeared. He had missed the autograph session, so a lot of people
+    crowded around him. Not everyone seemed to notice.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: The basement is protected by a retinal scanner, and it only unlocks
+    for me or the curator. This is my day off but he called me in to <b>double</b>
+    check it wasn't hacked. And it <i>wasn't</i>!
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

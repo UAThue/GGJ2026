@@ -21,7 +21,8 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: I'm lucky I only live a few minutes away brah. I had to use the bathroom
+    but it was locked! I managed to get home <i>just in time</i>!
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

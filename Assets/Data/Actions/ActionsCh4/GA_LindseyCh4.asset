@@ -21,7 +21,8 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: Charlie? Him doing weights or handling animals? Yeah right. He seemed
+    so beaten when it came to breathing when we talked at the event earlier.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

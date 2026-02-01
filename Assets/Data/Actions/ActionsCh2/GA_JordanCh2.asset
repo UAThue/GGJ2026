@@ -21,7 +21,8 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: The magician did some quick change tricks in which they changed costumes.
+    I bet <i>that</i> would be useful for crime!
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

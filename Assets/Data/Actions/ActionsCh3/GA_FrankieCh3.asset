@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: Right smack dab in the middle of the evening was a 20 minute block
+    of two raffles. But the second half overlapped with the autograph session so
+    almost everone missed it!
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

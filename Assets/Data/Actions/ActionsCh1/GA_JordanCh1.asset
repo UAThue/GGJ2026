@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: They're out of sweets completely, I swear they need to stock up on
+    much more for events like these. I would truly <b>sell</b> my mask just for a
+    chance to get another sweet platter.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

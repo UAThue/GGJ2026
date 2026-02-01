@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: Someone who had told me that they had been a consultant on the show's
+    water episodes left in a hurry during the action. They hopped in a car and drove
+    really, <i>really</i> quickly.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

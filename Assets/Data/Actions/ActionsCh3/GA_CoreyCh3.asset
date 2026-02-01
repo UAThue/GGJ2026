@@ -21,7 +21,8 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: At some point there was a <i>literal</i> elephant in the room! <b>WHY
+    WON'T ANYONE ACKNOWLEDGE IT BUT ME</b>?
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []

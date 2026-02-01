@@ -21,7 +21,9 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 
+  dialogText: Corey.. Corey.. Oh, them, I think it was a <i>black</i> mask they wore?
+    May have been blue.. no, black.. blue, it was one of the two, it was very dark
+    though.
   speakerSprite: {fileID: 0}
   invokeSounds: []
   cancelSounds: []
