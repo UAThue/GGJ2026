@@ -36,7 +36,7 @@ public class Phase1_SelectableMask : MonoBehaviour
 		}
 		else
 		{
-            mySelectableMask.color = new Color(1, 1, 1, 0.6f);
+            mySelectableMask.color = new Color(1, 1, 1, 0.0f);
 		}
     }
 

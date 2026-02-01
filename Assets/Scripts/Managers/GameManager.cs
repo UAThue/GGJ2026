@@ -52,6 +52,25 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public static void ShowHUD()
+    {
+        UIManager.instance.ShowHUD();
+    }
+
+    public static void HideHUD()
+    {
+        UIManager.instance.HideHUD();
+    }
+
+    public static void ToggleHUD()
+    {
+        if (UIManager.instance.HUDObject.activeInHierarchy) {
+            HideHUD();
+        } else {
+            ShowHUD();
+        }
+    }
+
     public void ToggleSolveScreen()
     { 
         switch (currentChapter.ID) {

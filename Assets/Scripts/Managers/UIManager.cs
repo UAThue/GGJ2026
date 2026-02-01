@@ -91,45 +91,52 @@ public class UIManager : MonoBehaviour
         }
     }
 
-
     public void ShowChapter1SolutionUI()
     {
+        GameManager.HideHUD();
         GameManager.instance.SetPlayerMove(false);
         Chapter1SolutionObject.SetActive(true);
     }
     public void ShowChapter2SolutionUI()
     {
+        GameManager.HideHUD();
         GameManager.instance.SetPlayerMove(false);
         Chapter2SolutionObject.SetActive(true);
     }
     public void ShowChapter3SolutionUI()
     {
+        GameManager.HideHUD();
         GameManager.instance.SetPlayerMove(false);
         Chapter3SolutionObject.SetActive(true);
     }
     public void ShowChapter4SolutionUI()
     {
+        GameManager.HideHUD();
         GameManager.instance.SetPlayerMove(false);
         Chapter4SolutionObject.SetActive(true);
     }
 
     public void HideChapter1SolutionUI()
     {
+        GameManager.ShowHUD();
         GameManager.instance.SetPlayerMove(true);
         Chapter1SolutionObject.SetActive(false);
     }
     public void HideChapter2SolutionUI()
     {
+        GameManager.ShowHUD();
         GameManager.instance.SetPlayerMove(true);
         Chapter2SolutionObject.SetActive(false);
     }
     public void HideChapter3SolutionUI()
     {
+        GameManager.ShowHUD();
         GameManager.instance.SetPlayerMove(true);
         Chapter3SolutionObject.SetActive(false);
     }
     public void HideChapter4SolutionUI()
     {
+        GameManager.ShowHUD();
         GameManager.instance.SetPlayerMove(true);
         Chapter4SolutionObject.SetActive(false);
     }
