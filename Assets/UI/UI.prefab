@@ -59,6 +59,8 @@ MonoBehaviour:
   dialogBoxOverlay: {fileID: 5386321228572793688}
   dialogueBoxText: {fileID: 4402981142950272933}
   dialogBoxSpeaker: {fileID: 5410360259497048732}
+  dialogBoxAnimator: {fileID: 4258867287268639926}
+  typewriterDelay: 0.01
   photo: {fileID: 5992174169028609992}
 --- !u!1001 &3033621958965179650
 PrefabInstance:
@@ -534,6 +536,11 @@ PrefabInstance:
 --- !u!224 &3335002168893615059 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5076668295030899432, guid: ea8a5f97145a84348b2955da488a2c6a, type: 3}
+  m_PrefabInstance: {fileID: 7510803680027846971}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4258867287268639926 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5990127376286903693, guid: ea8a5f97145a84348b2955da488a2c6a, type: 3}
   m_PrefabInstance: {fileID: 7510803680027846971}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &4402981142950272933 stripped

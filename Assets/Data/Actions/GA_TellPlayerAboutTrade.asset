@@ -18,11 +18,12 @@ MonoBehaviour:
   OnCancel:
     m_PersistentCalls:
       m_Calls: []
-  overlay: {fileID: 0}
-  background: {fileID: 0}
-  DialogText: This mask isn't mine, you know. I'm a Green Ranger fan at heart, but
-    some idiot paid me to trade, cause he brought the wrong one. My Green Ranger
-    mask was great, but I can buy a better one with the money.
+  isActive: 0
+  overlay: {fileID: 21300000, guid: 0db393026bfeb5a49b35d6f63e62b70f, type: 3}
+  background: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  dialogText: Someone swapped masks with me. They needed Green and brought the wrong
+    one! This needs to  be rewritten!
+  speakerSprite: {fileID: 21300000, guid: 59c5f1e476ecd944ba7f4b88ac70341e, type: 3}
   invokeSounds: []
   cancelSounds: []
-  music: {fileID: 8300000, guid: 587cb8cedee3420479ca46ef83b9ef52, type: 3}
+  music: {fileID: 0}
