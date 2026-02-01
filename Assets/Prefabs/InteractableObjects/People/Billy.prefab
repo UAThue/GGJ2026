@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1462164911993775899
+--- !u!1001 &8096587789775186890
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.99
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 6.93
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a41125f7b6672f34fbb013b17ec4a472, type: 2}
     - target: {fileID: 919132149155446097, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
       propertyPath: m_Name
-      value: Innocent1
+      value: Billy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -62,27 +62,27 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2685520865032429987}
+      addedObject: {fileID: 9013484671455039642}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 228499425484996872}
+      addedObject: {fileID: 5296168680793962817}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5601142029876724845}
+      addedObject: {fileID: 1637178139588115413}
   m_SourcePrefab: {fileID: 100100000, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
---- !u!1 &1768734793599605322 stripped
+--- !u!1 &8979529372907968155 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
-  m_PrefabInstance: {fileID: 1462164911993775899}
+  m_PrefabInstance: {fileID: 8096587789775186890}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &2685520865032429987
+--- !u!95 &9013484671455039642
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768734793599605322}
+  m_GameObject: {fileID: 8979529372907968155}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
   m_Controller: {fileID: 9100000, guid: 34f91ddc9631806418f3452153b7a908, type: 2}
@@ -97,13 +97,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!65 &228499425484996872
+--- !u!65 &5296168680793962817
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768734793599605322}
+  m_GameObject: {fileID: 8979529372907968155}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -116,15 +116,15 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 2, z: 3}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 1, z: 1}
---- !u!114 &5601142029876724845
+--- !u!114 &1637178139588115413
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768734793599605322}
+  m_GameObject: {fileID: 8979529372907968155}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e681da46573568d4dae954f39b99b8a5, type: 3}
@@ -134,7 +134,19 @@ MonoBehaviour:
     dictionary:
     - key: {fileID: 11400000, guid: ec17406ca11dfac4abef865edc4df638, type: 2}
       value: {fileID: 11400000, guid: d45a2f257fe40c042bd6eac4b017ba20, type: 2}
+    - key: {fileID: 11400000, guid: 98269aef018f4e942b0d88ef8379226d, type: 2}
+      value: {fileID: 11400000, guid: 5badd4c76d86162409a2f3db8ff57efe, type: 2}
+    - key: {fileID: 11400000, guid: 63b0e55b3fbee3641b61e17b9394dcc9, type: 2}
+      value: {fileID: 11400000, guid: 5badd4c76d86162409a2f3db8ff57efe, type: 2}
+    - key: {fileID: 11400000, guid: cb3d1a237f0b3b042b1dd73c5f998b38, type: 2}
+      value: {fileID: 11400000, guid: 5badd4c76d86162409a2f3db8ff57efe, type: 2}
   interactionActions:
     dictionary:
     - key: {fileID: 11400000, guid: ec17406ca11dfac4abef865edc4df638, type: 2}
-      value: {fileID: 11400000, guid: 4998cd3510f176f438f082766500e5be, type: 2}
+      value: {fileID: 11400000, guid: 1b76f8bb2f7d17046a411acfa91e9802, type: 2}
+    - key: {fileID: 11400000, guid: 98269aef018f4e942b0d88ef8379226d, type: 2}
+      value: {fileID: 11400000, guid: cf03b1634dfeb2e41a70eeec10853070, type: 2}
+    - key: {fileID: 11400000, guid: 63b0e55b3fbee3641b61e17b9394dcc9, type: 2}
+      value: {fileID: 11400000, guid: 449e75a215e40de4cb5e43366d4c8dca, type: 2}
+    - key: {fileID: 11400000, guid: cb3d1a237f0b3b042b1dd73c5f998b38, type: 2}
+      value: {fileID: 11400000, guid: a2e7404f277dc8b4d90b606cc011e60d, type: 2}

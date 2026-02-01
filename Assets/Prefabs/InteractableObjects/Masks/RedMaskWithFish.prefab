@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7131624435798348767, guid: 092c3391deb0bd7418df27a65df84fbe, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2797437804755019049, guid: 092c3391deb0bd7418df27a65df84fbe, type: 3}
       propertyPath: m_IsActive
@@ -178,7 +178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 092c3391deb0bd7418df27a65df84fbe, type: 3}
       propertyPath: m_Name
-      value: RedMaskNoFish
+      value: RedMaskWithFish
       objectReference: {fileID: 0}
     - target: {fileID: 948717671249152623, guid: 092c3391deb0bd7418df27a65df84fbe, type: 3}
       propertyPath: m_IsActive

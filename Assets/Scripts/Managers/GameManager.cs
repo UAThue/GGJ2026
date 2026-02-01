@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     [Header("Important Objcts")] // NOTE: Keep this section as light as possible, please!
     public ControllerPlayer player;
     public ChapterData currentChapter; // What chapter are we currently in? 
+    [Header("Objects for Cheap Jam Hacks")]
+    public GameObject parentObjectForInnocents;
 
     [Header("Game Data")]
     public ChapterData startingChapter;
@@ -45,15 +47,23 @@ public class GameManager : MonoBehaviour
     {
         // Set the chapter to the next chapters
         if (currentChapter.nextChapter != null) {
+            currentChapter.OnChapterEnd.Invoke();
+
             currentChapter = currentChapter.nextChapter;
-        } else {
+            currentChapter.OnChapterStart.Invoke();
+        }
+        else {
             //TODO: Load Game Over ?
         }
 
-        // TODO: Remove anyone who "left the puzzle" as we changed chapters.
-        // Right now, we just leave them there, but they would be unable to be interacted with.
+        
 
         // I don't think anything else really needs to be done 
         // Is there an intro to the level? Move back to the starting point?  Not sure!
+    }
+
+    public static void DestroyTheInnocents()
+    {
+        instance.parentObjectForInnocents.SetActive(false);
     }
 }

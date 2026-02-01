@@ -15,6 +15,7 @@ public class PForNextLevel : MonoBehaviour
 
     void OnP(InputAction.CallbackContext e)
     {
+        // Debug.Log("NEXT LEVEL");
         GameManager.instance.LoadNextChapter();
     }
 
