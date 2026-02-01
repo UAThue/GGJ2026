@@ -12,5 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a824eb4c742b64cbf8ab80c8aba457, type: 3}
   m_Name: Ch_Chapter2
   m_EditorClassIdentifier: Assembly-CSharp::ChapterData
+  ID: 2
   displayName: Chapter 2:\n The Right Job for the Mask
   nextChapter: {fileID: 11400000, guid: 63b0e55b3fbee3641b61e17b9394dcc9, type: 2}
+  OnChapterStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnChapterEnd:
+    m_PersistentCalls:
+      m_Calls: []
