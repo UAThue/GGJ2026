@@ -22,6 +22,8 @@ public class ChapterComplete : MonoBehaviour
     [TextArea(5, 10)]
     public string[] summationList3;
 
+    private int debugNextScene;
+    private float debugNextSceneTimer;
 
     private float lerper;
 
@@ -46,7 +48,7 @@ public class ChapterComplete : MonoBehaviour
 
     void Start()
     {
-        currentScreenState = ScreenStates.theCaseBegins;
+
     }
 
     // Update is called once per frame
@@ -56,6 +58,26 @@ public class ChapterComplete : MonoBehaviour
         {
             case ScreenStates.idle:
                 //Waiting
+                if(debugNextScene>0)
+				{
+                    debugNextSceneTimer += Time.deltaTime;
+				}
+                if (debugNextSceneTimer > 1.5f)
+                {
+                    debugNextScene = 0;
+                    debugNextSceneTimer = 0;
+                }
+                if (Input.GetKeyDown(KeyCode.N))
+                {
+                    Debug.Log("N");
+                    debugNextScene += 1;
+                }
+                if(debugNextScene>4)
+				{
+                    debugNextScene = 0;
+                    debugNextSceneTimer = 0;
+                    currentScreenState = ScreenStates.fadeBlackIn;
+				}
                 break;
             case ScreenStates.theCaseBegins:
                 currentChapter = 0;
@@ -230,6 +252,7 @@ public class ChapterComplete : MonoBehaviour
             case ScreenStates.newChapterText:
                 lerper += Time.deltaTime;
                 newChapterText.text = string.Format("Chapter {0}", currentChapter + 1);
+                newChapterText.color = Color.white;
                 if (lerper > .3f)
                 {
                     newChapterText.gameObject.SetActive(true);
@@ -248,12 +271,13 @@ public class ChapterComplete : MonoBehaviour
             case ScreenStates.fadeNewChapterTextAndBlackout:
                 lerper += Time.deltaTime;
                 blackScreenFade.color = Color.Lerp(Color.black, Color.clear, lerper);
-                newChapterText.color = Color.Lerp(Color.black, Color.clear, lerper);
+                newChapterText.color = Color.Lerp(Color.white, Color.clear, lerper);
                 if (lerper >= 1)
                 {
                     currentScreenState = ScreenStates.idle;
                     newChapterText.gameObject.SetActive(false);
                     lerper = 0;
+                    currentChapter += 1;
                 }
                 break;
         }
