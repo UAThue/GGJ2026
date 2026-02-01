@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -12,6 +13,17 @@ public class UIManager : MonoBehaviour
     public float vignetteFadeSpeed = 1; // How many units of alpha we chage in 1 second
     public float vignetteFadedInOpacity = 0.2f;
     public float vignetteFadedOutOpacity = 0.0f;
+    [Header("Interaction Text")]
+    public Image interactionObjectBackground;
+    public TMP_Text interactionObjectNameText;
+    public TMP_Text interactionObjectPressEText;
+    [Header("Dialog Box")]
+    public Image dialogBoxBackground;
+    public Image dialogBoxOverlay;
+    public TMP_Text dialogueBoxText; //What is being said
+    [Header("Photo Popup")]
+    public Image photo;
+
 
     void Awake()
     {
@@ -29,16 +41,53 @@ public class UIManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Set the vignette to the right color
+        // Set the vignette to the right color, and hide it
         Color newColor = Color.white;
         newColor.a = 0;
         vignette.color = newColor;
+
+        // Hide the interaction text
+        HideInteractionText();
+
+        // Hide photos
+        HidePhoto();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void ShowInteractionText(string name = "", string interactionText = "<i>Press E to Interact</i>")
+    {
+        // Activate the UI element
+        interactionObjectBackground.gameObject.SetActive(true);
+        // Set data
+        interactionObjectNameText.SetText(name);
+        interactionObjectPressEText.SetText(interactionText);
+}
+
+    public void HideInteractionText()
+    {
+        // Hide the UI element - Set text to nothing
+        interactionObjectBackground.gameObject.SetActive(false);
+        interactionObjectNameText.SetText("");
+        interactionObjectPressEText.SetText("");
+    }
+
+    public void ShowPhoto(Sprite photoToShow)
+    {
+        // Activate the UI element
+        photo.gameObject.SetActive(true);
+        // Set data
+        photo.sprite = photoToShow;
+    }
+
+    public void HidePhoto()
+    {
+        // Hide the UI element - Set text to nothing
+        photo.gameObject.SetActive(false);
     }
 
     public void ShowVignette()
