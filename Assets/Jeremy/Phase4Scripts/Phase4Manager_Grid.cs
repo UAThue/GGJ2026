@@ -5,6 +5,7 @@ using TMPro;
 public class Phase4Manager_Grid : MonoBehaviour
 {
     public GameObject gridUI;
+    public ChapterData finalChapter;
 
     public Sprite circle;
     public Sprite ex;
@@ -15,6 +16,8 @@ public class Phase4Manager_Grid : MonoBehaviour
     public TMP_Text[] names;
     public TMP_Text[] jobs;
     public TMP_Text[] colors;
+
+    public GameObject closeButton;
 
     public bool go;
 
@@ -74,7 +77,15 @@ public class Phase4Manager_Grid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(go == true)
+        if(GameManager.instance.currentChapter!= finalChapter)
+		{
+            closeButton.gameObject.SetActive(false);
+		}
+		else
+		{
+            closeButton.gameObject.SetActive(true);
+        }
+        if (go == true)
 		{
             switch(myCurrentState)
 			{
