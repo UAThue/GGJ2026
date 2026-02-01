@@ -8,7 +8,6 @@ public class GA_ShowPhoto : GameAction
 {
     [Header("Visuals")]
     public Sprite photo;
-    public PhotoLocation screenLocation;
     [Header("Sounds")]
     public List<AudioClip> invokeSounds;
     public List<AudioClip> cancelSounds;
@@ -32,8 +31,6 @@ public class GA_ShowPhoto : GameAction
         UIManager.instance.HideInteractionText();
 
         // Show (or start showing) the photo in the UI, probably using an UI manager
-        //      TODO: Take location into account -- we may just pass photoLocation into the UI Manager
-        //      Can solve that later
         UIManager.instance.ShowPhoto(photo);
 
         if (invokeSounds.Count > 0) {

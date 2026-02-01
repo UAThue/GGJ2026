@@ -18,8 +18,8 @@ MonoBehaviour:
   OnCancel:
     m_PersistentCalls:
       m_Calls: []
-  isActive: 0
-  photo: {fileID: 0}
+  isActive: 1
+  photo: {fileID: 21300000, guid: 5b5efa391f3a0c640a2a34317859e831, type: 3}
   screenLocation: 0
   invokeSounds: []
   cancelSounds: []

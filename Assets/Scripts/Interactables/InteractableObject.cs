@@ -28,16 +28,23 @@ public class InteractableObject : MonoBehaviour
 
     public void InteractInvokeAll()
     {
+        Debug.Log(gameObject.name + " is attempting to perform actions for " + GameManager.instance.currentChapter.displayName);
+
         // Get the list of all interaction actions for this chapter
         List<GameAction> temp = interactionActions.FindAll(GameManager.instance.currentChapter);
 
         // Cancel if no actions
-        if (temp == null) return;
+        if (temp == null)
+        {
+            Debug.Log(gameObject.name + " has no interaction actions for " + GameManager.instance.currentChapter.displayName);
+            return;
+        }
 
         // Perform them all
         foreach (GameAction action in temp) {
             if (action != null) {
                 if (!action.isActive) {
+                    Debug.Log("Performing action: " + action.name);
                     action.Invoke();
                 }
             }
@@ -108,6 +115,8 @@ public class InteractableObject : MonoBehaviour
 
             // Remember that the player is in the trigger by adding to player's list of objects in range
             GameManager.instance.player.objectsInRange.Add(this);
+
+            // Call all the "enter range" actions
             RangeInvokeAll();
         }
     }

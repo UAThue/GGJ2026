@@ -21,10 +21,8 @@ MonoBehaviour:
   isActive: 0
   overlay: {fileID: 0}
   background: {fileID: 0}
-  dialogText: 'No_Input
-
-'
-  speakerSprite: {fileID: 0}
+  dialogText: Fine. I was wearing the Black Mask. What's it to ya'?
+  speakerSprite: {fileID: 21300000, guid: 35bbce649d9d6394daca39ec73ca1af6, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}

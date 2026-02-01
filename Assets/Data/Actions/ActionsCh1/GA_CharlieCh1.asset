@@ -19,12 +19,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActive: 0
-  overlay: {fileID: 0}
-  background: {fileID: 0}
+  overlay: {fileID: 21300000, guid: 7c6c85129d8685c4c914c1dd4e95a72d, type: 3}
+  background: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogText: Suppose my pastry skills were enough to require me to stay here, I
     don't mind going on for hours upon my creations. I don't recall you at the party,
     wanna try one while you're here?
-  speakerSprite: {fileID: 0}
+  speakerSprite: {fileID: 21300000, guid: 59c5f1e476ecd944ba7f4b88ac70341e, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}

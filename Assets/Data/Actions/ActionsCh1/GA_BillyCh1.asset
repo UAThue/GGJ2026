@@ -19,11 +19,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActive: 0
-  overlay: {fileID: 0}
-  background: {fileID: 0}
+  overlay: {fileID: 21300000, guid: 7c6c85129d8685c4c914c1dd4e95a72d, type: 3}
+  background: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogText: I get these things must be expensive, but why's someone gotta ruin
     the event with a stunt like this. Even Nicole wouldn't stoop this low.
-  speakerSprite: {fileID: 0}
+  speakerSprite: {fileID: 21300000, guid: 3158f95855a890b479ffde83c87ddb66, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}
