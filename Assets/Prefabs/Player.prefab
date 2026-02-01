@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5434184121720559263}
   - component: {fileID: 358563430989968558}
   - component: {fileID: 8513729633586740107}
+  - component: {fileID: 756278156964451358}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -239,6 +240,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0b7ffff2f79d14dbaa416ab039fca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pawn
+--- !u!114 &756278156964451358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704709051173159470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e0f586254618ed448718ef02d5e67e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControllerPlayer
+  inputActions: {fileID: -944628639613478452, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  objectsInRange: []
 --- !u!1 &3596404654523253549
 GameObject:
   m_ObjectHideFlags: 0

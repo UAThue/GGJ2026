@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -12,6 +13,20 @@ public class UIManager : MonoBehaviour
     public float vignetteFadeSpeed = 1; // How many units of alpha we chage in 1 second
     public float vignetteFadedInOpacity = 0.2f;
     public float vignetteFadedOutOpacity = 0.0f;
+    [Header("Interaction Text")]
+    public Image interactionObjectBackground;
+    public TMP_Text interactionObjectNameText;
+    public TMP_Text interactionObjectPressEText;
+    [Header("Dialog Box")]
+    public Image dialogBoxBackground;
+    public Image dialogBoxOverlay;
+    public TMP_Text dialogueBoxText; //What is being said
+    public Image dialogBoxSpeaker;
+    public Animator dialogBoxAnimator;
+    public float typewriterDelay = 0.01f;
+    [Header("Photo Popup")]
+    public Image photo;
+
 
     void Awake()
     {
@@ -29,16 +44,106 @@ public class UIManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Set the vignette to the right color
+        // Set the vignette to the right color, and hide it
         Color newColor = Color.white;
         newColor.a = 0;
         vignette.color = newColor;
+
+        // Hide the interaction text
+        HideInteractionText();
+
+        // Hide photos
+        HidePhoto();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void ShowDialogBox ( Sprite background, Sprite foreground, string RichText, Sprite speakerSprite = null )
+    {
+        // Set the background and foreground images
+        dialogBoxBackground.sprite = background;
+        dialogBoxOverlay.sprite = foreground;
+
+        // Set the text to 0 so we can typewriter
+        dialogueBoxText.maxVisibleCharacters = 0;
+
+        // Raise up the animator
+        AnimRise();
+
+        // If speaker sprite is null, turn off the box
+        if (speakerSprite == null) {
+            dialogBoxSpeaker.gameObject.SetActive(false);
+        } else {
+            // Otherwise, show the speaker sprite
+            dialogBoxSpeaker.sprite = speakerSprite;
+            dialogBoxSpeaker.gameObject.SetActive(true);
+        }
+
+
+    }
+
+    private void AnimRise()
+    {
+        //TODO: Take movement control from player
+        dialogBoxAnimator.SetTrigger("EnterDialogue");
+    }
+
+    public void AnimFall()
+    {
+        //TODO: Return control to the player
+        dialogBoxAnimator.SetTrigger("ExitDialogue");
+    }
+
+    public void StartTypewriter()
+    {
+        StartCoroutine(Typewriter());
+    }
+
+    IEnumerator Typewriter()
+    {
+        // Add one to the text 
+        dialogueBoxText.maxVisibleCharacters++;
+
+        yield return new WaitForSeconds(typewriterDelay);
+
+        if (dialogueBoxText.maxVisibleCharacters < dialogueBoxText.text.Length) {
+            StartCoroutine(Typewriter());
+        }
+    }
+
+    public void ShowInteractionText(string name = "", string interactionText = "<i>Press E to Interact</i>")
+    {
+        // Activate the UI element
+        interactionObjectBackground.gameObject.SetActive(true);
+        // Set data
+        interactionObjectNameText.SetText(name);
+        interactionObjectPressEText.SetText(interactionText);
+}
+
+    public void HideInteractionText()
+    {
+        // Hide the UI element - Set text to nothing
+        interactionObjectBackground.gameObject.SetActive(false);
+        interactionObjectNameText.SetText("");
+        interactionObjectPressEText.SetText("");
+    }
+
+    public void ShowPhoto(Sprite photoToShow)
+    {
+        // Activate the UI element
+        photo.gameObject.SetActive(true);
+        // Set data
+        photo.sprite = photoToShow;
+    }
+
+    public void HidePhoto()
+    {
+        // Hide the UI element - Set text to nothing
+        photo.gameObject.SetActive(false);
     }
 
     public void ShowVignette()

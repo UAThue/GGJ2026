@@ -28,9 +28,13 @@ public class GA_ShowPhoto : GameAction
 
     public override void Invoke()
     {
-        //TODO: Show (or start showing) the photo in the UI, probably using an UI manager
-        //      Be sure to take location into account -- we may just pass photoLocation into the UI Manager
+        // Hide any interaction text that might be visible
+        UIManager.instance.HideInteractionText();
+
+        // Show (or start showing) the photo in the UI, probably using an UI manager
+        //      TODO: Take location into account -- we may just pass photoLocation into the UI Manager
         //      Can solve that later
+        UIManager.instance.ShowPhoto(photo);
 
         if (invokeSounds.Count > 0) {
             //TODO: Play all the sounds ( Sequentially? Parallel? I don't know! Need to solve this design! )
@@ -47,7 +51,8 @@ public class GA_ShowPhoto : GameAction
 
     public override void Cancel()
     {
-        //TODO: Hide (or start hiding) the photo in the UI, probably via UI manager
+        //Hide (or start hiding) the photo in the UI, probably via UI manager
+        UIManager.instance.HidePhoto();
 
         if (cancelSounds.Count > 0) 
         {

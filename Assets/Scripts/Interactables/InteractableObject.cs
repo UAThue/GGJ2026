@@ -26,6 +26,59 @@ public class InteractableObject : MonoBehaviour
         //MAYBE: Remove us from the up to date list in the Game Manager
     }
 
+    public void InteractInvokeAll()
+    {
+        // Get the list of all interaction actions for this chapter
+        List<GameAction> temp = interactionActions.FindAll(GameManager.instance.currentChapter);
+
+        // Perform them all
+        foreach (GameAction action in temp) {
+            if (!action.isActive) {
+                action.Invoke();
+            }
+        }
+    }
+    public void InteractCancelAll()
+    {
+        // Get the list of all interaction actions for this chapter
+        List<GameAction> temp = interactionActions.FindAll(GameManager.instance.currentChapter);
+
+        // Perform them all
+        foreach (GameAction action in temp) {
+            if (action.isActive) {
+                action.Cancel();
+            }
+        }
+    }
+
+    public void RangeInvokeAll()
+    {
+        // Do any "entering trigger" actions - NOTE: this is not the game action ( like viewing the target )
+        //        but things like "show the E to interact text" 
+        // Get a list of all the game actions for the current chapter
+        List<GameAction> temp = rangeActions.FindAll(GameManager.instance.currentChapter);
+        // Perform them all
+        foreach (GameAction action in temp) {
+            // Only invoke actions that aren't already invoked!
+            if (!action.isActive) {
+                action.Invoke();
+            }
+        }
+    }
+
+    public void RangeCancelAll()
+    {
+        //Call the "cancel" actions for this action ( so text/photo goes away when we leave trigger)
+        List<GameAction> temp = rangeActions.FindAll(GameManager.instance.currentChapter);
+        // Perform them all
+        foreach (GameAction action in temp) {
+            // If running, cancel it - don't cancel things that aren't running
+            if (action.isActive) {
+                action.Cancel();
+            }
+        }
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         // Check if the other has a Pawn component
@@ -33,15 +86,7 @@ public class InteractableObject : MonoBehaviour
 
             // Remember that the player is in the trigger by adding to player's list of objects in range
             GameManager.instance.player.objectsInRange.Add(this);
-
-            // Do any "entering trigger" actions - NOTE: this is not the game action ( like viewing the target )
-            //        but things like "show the E to interact text" 
-            // Get a list of all the game actions for the current chapter
-            List<GameAction> temp = rangeActions.FindAll(GameManager.instance.currentChapter);
-            // Perform them all
-            foreach (GameAction action in temp) {
-                action.Invoke();
-            }
+            RangeInvokeAll();
         }
     }
 
@@ -50,15 +95,12 @@ public class InteractableObject : MonoBehaviour
         // Check if the other has a Pawn component
         if (other.GetComponent<Pawn>() != null) {
 
+            // Turn off any active actions
+            InteractCancelAll();
+            RangeCancelAll();
+
             // Forget that the player is in the trigger by adding to player's list of objects in range
             GameManager.instance.player.objectsInRange.Remove(this);
-
-            //Call the "cancel" actions for this action ( so text/photo goes away when we leave trigger)
-            List<GameAction> temp = rangeActions.FindAll(GameManager.instance.currentChapter);
-            // Perform them all
-            foreach (GameAction action in temp) {
-                action.Cancel();
-            }
         }
     }
 }

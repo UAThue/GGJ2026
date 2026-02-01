@@ -28,12 +28,12 @@ public class DialogueUI : MonoBehaviour
     {
         //TODO: Remove control from the player
 
-        background.color = dialogObject.bgColor;
-        foreground.color = dialogObject.fgColor;
+        //background.color = dialogObject.bgColor;
+        //foreground.color = dialogObject.fgColor;
 
         speakerImage.sprite = dialogObject.speakerSprite;
         //dialogueText.text = currentAction.DialogText;
-        dialogueText.text = dialogObject.DialogText;
+        //dialogueText.text = dialogObject.DialogText;
 
         dialogueText.maxVisibleCharacters = 0;
         AnimRise();
