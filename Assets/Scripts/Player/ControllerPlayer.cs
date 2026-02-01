@@ -24,7 +24,6 @@ public class ControllerPlayer : Controller
     {
         // Enable my input actions
         inputActions.Enable();
-
         base.Start();
     }
 
@@ -44,6 +43,9 @@ public class ControllerPlayer : Controller
         }
         if (inputActions["Cancel"].triggered) {
             CancelAllInteractableObjects();
+        }
+        if (inputActions["Solve"].triggered) {
+            GameManager.instance.ToggleSolveScreen();
         }
 
         base.Update();

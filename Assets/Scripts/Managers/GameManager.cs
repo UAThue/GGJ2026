@@ -52,6 +52,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ToggleSolveScreen()
+    { 
+        switch (currentChapter.ID) {
+            case 0:
+                break;
+            case 1:
+                UIManager.instance.ToggleChapter1SoltionUI();
+                break;
+            case 2:
+                UIManager.instance.ToggleChapter2SoltionUI();
+                break;
+            case 3:
+                UIManager.instance.ToggleChapter3SoltionUI();
+                break;
+            case 4:
+                UIManager.instance.ToggleChapter4SoltionUI();
+                break;
+        }
+    }
+
     void InitializeGame()
     {
         //TODO: Start a new game session - clear any data, set everything to starting data. 

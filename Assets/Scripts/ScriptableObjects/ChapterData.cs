@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class ChapterData : ScriptableObject
 {
+    public int ID;
     public string displayName; // This is how the PLAYER will see the chapter, so we can say "Chapter 3: Whodunnit?"
                                //   instead of "30" as the chapter
     public ChapterData nextChapter;
