@@ -19,11 +19,15 @@ public class InteractableObject : MonoBehaviour
         // Force the collider to be a trigger
         Collider collider = GetComponent<Collider>();
         collider.isTrigger = true;
+
+        InteractCancelAll();
+        RangeCancelAll();
     }
 
     public void OnDestroy()
     {
         //MAYBE: Remove us from the up to date list in the Game Manager
+
     }
 
     public void InteractInvokeAll()

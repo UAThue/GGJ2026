@@ -31,4 +31,10 @@ public abstract class GameAction : ScriptableObject
         // After we do whatever is hardcoded in the child, we can also do the actions designers "staple on to the end"
         OnInvoke.Invoke();
     }
+
+    public void OnDestroy()
+    {
+        // Always return to false when done
+        isActive = false;
+    }
 }
