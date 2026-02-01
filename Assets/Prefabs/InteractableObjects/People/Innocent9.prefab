@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: 1.3284221
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 15.653347
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51,7 +51,7 @@ PrefabInstance:
     - target: {fileID: -2049929814205202405, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: a41125f7b6672f34fbb013b17ec4a472, type: 2}
+      objectReference: {fileID: 2100000, guid: 945f89627d4b0484d86d1fea058054c9, type: 2}
     - target: {fileID: 919132149155446097, guid: aadbb66091c8ab340896b10727f115ac, type: 3}
       propertyPath: m_Name
       value: Innocent9
