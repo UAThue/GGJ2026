@@ -19,7 +19,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isActive: 0
-  photo: {fileID: 21300000, guid: 9ed6c15587b311d4a975577a71d8d699, type: 3}
+  photo: {fileID: 21300000, guid: 6a33e70f346572d4a873b6a72cbc95b0, type: 3}
   invokeSounds: []
   cancelSounds: []
   music: {fileID: 0}
