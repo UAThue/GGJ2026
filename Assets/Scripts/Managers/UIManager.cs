@@ -31,6 +31,7 @@ public class UIManager : MonoBehaviour
     public Image photo;
     [Header("Main Menu")]
     public GameObject mainMenuObject;
+    public GameObject victoryObject;
     [Header("In Game HUD")]
     public GameObject HUDObject;
     public Image logo;
@@ -186,6 +187,13 @@ public class UIManager : MonoBehaviour
 
         // Show the Menu
         ShowMenu();
+
+        HideVictory();
+    }
+
+    void HideVictory()
+    {
+        victoryObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -193,6 +201,11 @@ public class UIManager : MonoBehaviour
     {
         // THIS IS BAD. NEVER DO THIS - Update Chapter ever freaking frame
         chapterTitle.SetText(GameManager.instance.currentChapter.displayName);
+    }
+
+    public void ShowVictory()
+    {
+        victoryObject.SetActive(true);
     }
 
     public void ShowHUD()

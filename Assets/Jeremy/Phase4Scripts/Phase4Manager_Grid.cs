@@ -20,6 +20,7 @@ public class Phase4Manager_Grid : MonoBehaviour
     public GameObject closeButton;
 
     public bool go;
+    private bool isLoading = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public enum currentState
@@ -44,6 +45,7 @@ public class Phase4Manager_Grid : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        /*
         foreach(TMP_Text t in names)
 		{
             t.color = new Color(1, 1, 1, 0);
@@ -56,6 +58,7 @@ public class Phase4Manager_Grid : MonoBehaviour
         {
             t.color = new Color(1, 1, 1, 0);
         }
+        */
     }
 
     public void BringUpUI()
@@ -150,7 +153,32 @@ public class Phase4Manager_Grid : MonoBehaviour
 		}
         if(victory == true)
 		{
-            Debug.Log("WIN THE GAME");
+            Win();
 		}
+    }
+
+    public void Win()
+    {
+        // Next chapter in 1 second -- UGH. NEVER USE INVOKE!
+        if (!isLoading) {
+            // Save that we are loading
+            isLoading = true;
+
+            // Stop Player Movement
+            GameManager.instance.SetPlayerMove(false);
+
+            // TODO: Play Stinger
+
+            // Delay and load
+            Invoke("LoadNext", 1.0f);
+        }
+    }
+
+    public void LoadNext()
+    {
+
+        // Set the game up to use the next UI
+        GameManager.instance.LoadNextChapter();
+
     }
 }

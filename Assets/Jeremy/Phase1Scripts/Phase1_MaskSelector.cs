@@ -44,14 +44,14 @@ public class Phase1_MaskSelector : MonoBehaviour
     void Update()
     {
         //Test using R to open menu
-        if (Input.GetKeyDown(KeyCode.R)) {
+        /*if (Input.GetKeyDown(KeyCode.R)) {
             if (phase1UI.activeSelf == false) {
                 openUI();
             }
             else {
                 closeUI();
             }
-        }
+        }*/
 
         //Check for win
         int winCount = 0;

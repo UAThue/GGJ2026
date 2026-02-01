@@ -128,7 +128,19 @@ public class GameManager : MonoBehaviour
             currentChapter.OnChapterStart.Invoke();
         }
         else {
-            //TODO: Load Game Over ? Or is that  just another chapter?
+            // Deactivate this object -- NOTE: I am assuming this is the Chapter 4!
+            UIManager.instance.HideChapter1SolutionUI();
+            UIManager.instance.HideChapter2SolutionUI();
+            UIManager.instance.HideChapter3SolutionUI();
+            UIManager.instance.HideChapter4SolutionUI();
+
+            UIManager.instance.HideMenu();
+            UIManager.instance.HideInteractionText();
+            UIManager.instance.HidePhoto();
+            UIManager.instance.HideDialogBox();
+            UIManager.instance.HideHUD();
+
+            UIManager.instance.ShowVictory();
         }
 
         MovePlayerToStart();
