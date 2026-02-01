@@ -51,6 +51,47 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void ToggleChapter1SoltionUI()
+    {
+        if (Chapter1SolutionObject.activeInHierarchy) {
+            HideChapter1SolutionUI();
+        }
+        else {
+            ShowChapter1SolutionUI();
+        }
+    }
+
+    public void ToggleChapter2SoltionUI()
+    {
+        if (Chapter2SolutionObject.activeInHierarchy) {
+            HideChapter2SolutionUI();
+        }
+        else {
+            ShowChapter2SolutionUI();
+        }
+    }
+
+    public void ToggleChapter3SoltionUI()
+    {
+        if (Chapter3SolutionObject.activeInHierarchy) {
+            HideChapter3SolutionUI();
+        }
+        else {
+            ShowChapter3SolutionUI();
+        }
+    }
+
+    public void ToggleChapter4SoltionUI()
+    {
+        if (Chapter4SolutionObject.activeInHierarchy) {
+            HideChapter4SolutionUI();
+        }
+        else {
+            ShowChapter4SolutionUI();
+        }
+    }
+
+
     public void ShowChapter1SolutionUI()
     {
         GameManager.instance.SetPlayerMove(false);
