@@ -8,6 +8,20 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
+    [Header("Jeremy")]
+    public Image fadeToBlack;
+    private float fadeTime;
+    public GameObject player;
+    public Transform toOffice;
+    public Transform fromOffice;
+    public Transform toBasement;
+    public Transform fromBasement;
+    public Transform toBackHall;
+    public Transform fromBackHall;
+    public Transform toBathroom;
+    public Transform fromBathroom;
+    private Vector3 currentTeleportLoc;
+    private bool teleporting = false;
     [Header("Vignette")]
     public GameObject vignetteObject;
     public Image vignette;
@@ -308,6 +322,104 @@ public class UIManager : MonoBehaviour
     {
         StopAllCoroutines();
         StartCoroutine(FadeViginetteOut());
+    }
+
+    public void FadeToBlack()
+	{
+        Debug.Log("Test2");
+        StopAllCoroutines();
+        fadeTime = 0;
+        StartCoroutine(BlackOverlayFadeIn());
+    }
+
+    public void TeleportPlayer(teleportLocations loc, GA_Teleport fromScript)
+    {
+        if (teleporting == false)
+        {
+            teleporting = true;
+            StartCoroutine(Teleport(loc));
+		}
+    }
+
+    public void FadeFromBlack()
+    {
+        StopAllCoroutines();
+        fadeTime = 0;
+        StartCoroutine(BlackOverlayFadeOut());
+    }
+
+
+    public IEnumerator BlackOverlayFadeIn()
+    {
+        while (fadeTime <= 1.1f)
+        {
+            fadeTime += Time.deltaTime;
+            fadeToBlack.color = new Color(0, 0, 0, fadeTime);
+            yield return null;
+        }
+        fadeToBlack.color = new Color(0, 0, 0, fadeTime);
+        fadeTime = 0;
+    }
+
+    public IEnumerator BlackOverlayFadeOut()
+    {
+        while (fadeTime <= 1.1f)
+        {
+            fadeTime += Time.deltaTime;
+            fadeToBlack.color = new Color(0, 0, 0, 1-fadeTime);
+            yield return null;
+            if (teleporting == true)
+            {
+                player.transform.position = currentTeleportLoc;
+            }
+        }
+        fadeToBlack.color = new Color(0, 0, 0, 1-fadeTime);
+        fadeTime = 0;
+        teleporting = false;
+    }
+
+    public IEnumerator Teleport (teleportLocations target)
+    {
+        while (fadeToBlack.color.a <= 1)
+        {
+            yield return null;
+        }
+        if (fadeToBlack.color.a >=1)
+        {
+            //Send the player and start the fadeOut
+            switch(target)
+			{
+                //These look a bit backwards only because we're sending you to the position of the reverse teleporer.
+                case teleportLocations.toOffice:
+                    Debug.Log("teleport to office");
+                    currentTeleportLoc = fromOffice.position;
+                    break;
+                case teleportLocations.fromOffice:
+                    Debug.Log("teleport from office");
+                    currentTeleportLoc = toOffice.position;
+                    break;
+                case teleportLocations.toBasement:
+                    player.transform.position = fromBasement.position;
+                    break;
+                case teleportLocations.fromBasement:
+                    player.transform.position = toBasement.position;
+                    break;
+                case teleportLocations.toBackHall:
+                    player.transform.position = fromBackHall.position;
+                    break;
+                case teleportLocations.fromBackhall:
+                    player.transform.position = toBackHall.position;
+                    break;
+                case teleportLocations.toBathroom:
+                    player.transform.position = fromBathroom.position;
+                    break;
+                case teleportLocations.fromBathroom:
+                    player.transform.position = toBathroom.position;
+                    break;
+            }
+            player.transform.position = currentTeleportLoc;
+            FadeFromBlack();
+        }
     }
 
     public IEnumerator FadeViginetteIn()
